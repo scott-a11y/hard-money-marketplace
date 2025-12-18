@@ -50,8 +50,7 @@ export default function DealCard({ deal }: DealCardProps) {
         </div>
         <div className="text-center">
           <p className="text-xs text-gray-600 mb-1">LTC</p>
-          <p className="text-sm font-semibold text-purple-600">{deal.ltc}%</p>
-        </div>
+            <p className="text-sm font-semibold text-purple-600">{deal.ltc?.toFixed(2)}%</p>        </div>
       </div>
     </div>
   );
