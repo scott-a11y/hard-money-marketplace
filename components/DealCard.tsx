@@ -37,7 +37,7 @@ export default function DealCard({ deal }: DealCardProps) {
         <div className="grid grid-cols-3 gap-2 mb-4">
           <div>
             <p className="text-xs text-gray-500">Rehab</p>
-            <p className="font-semibold text-gray-900">${(deal.rehab / 1000).toFixed(0)}k</p>
+            <p className="font-semibold text-gray-900">${(deal.rehab_budget / 1000).toFixed(0)}k</p>
           </div>
           <div>
             <p className="text-xs text-gray-500">LTV</p>
@@ -45,7 +45,7 @@ export default function DealCard({ deal }: DealCardProps) {
           </div>
           <div>
             <p className="text-xs text-gray-500">LTC</p>
-            <p className="font-semibold text-gray-900">{(((deal.purchase_price + deal.rehab) / deal.arv) * 100).toFixed(1)}%</p>
+            <p className="font-semibold text-gray-900">{(((deal.purchase_price + deal.rehab_budget) / deal.arv) * 100).toFixed(1)}%</p>
           </div>
         </div>
 
