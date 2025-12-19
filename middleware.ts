@@ -19,7 +19,7 @@ export default clerkMiddleware(async (auth, request) => {
 
   // Role-based route protection
   if (userId && sessionClaims) {
-    const userRole = sessionClaims.metadata?.role as string | undefined
+    const userRole = (sessionClaims as any).metadata?.role as string | undefined
     
     if (isLenderRoute(request) && userRole !== 'lender') {
       return Response.redirect(new URL('/borrower/dashboard', request.url))
